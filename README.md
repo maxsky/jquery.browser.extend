@@ -1,38 +1,38 @@
 # $.browser
 
-$.browser 属性允许我们检测哪一个Web浏览器正在访问网页，通过浏览器本身返回。它包含四个最流行的浏览器类（在Internet Explorer，Mozilla和Webkit，和Opera）以及每个版本信息标志。
+`$.browser` 属性允许我们检测哪一个 Web 浏览器正在访问网页，通过浏览器本身返回。它包含四个最流行的浏览器类（在 Internet Explorer，Mozilla 和Webkit，和 Opera）以及每个版本信息标志。
 
 可用的标志有：
 
-* webkit (从jQuery 1.4开始)
-* safari (不建议使用)
+* webkit（从 jQuery 1.4 开始）
+* safari（不建议使用）
 * opera
 * msie
 * mozilla
 
-因为 $.browser 使用 navigator.userAgent 来确定平台，因此用户可以通过技术手段来修改该值从而欺骗浏览器。避免该问题的最好办法就是使用 $.support，$.support 属性比 $.browser 提供更有效的检测特定功能的支持。
+因为 `$.browser` 使用 `navigator.userAgent` 来确定平台，因此用户可以通过技术手段来修改该值从而欺骗浏览器。避免该问题的最好办法就是使用 `$.support`，`$.support` 属性比 `$.browser` 提供更有效的检测特定功能的支持。
 
 >**Example:** 如果当前使用的浏览器是 Microsoft 的 Internet Explorer，那么下面的语句会返回 true。
 
-```
+```js
 $.browser.msie;
 ```
 
 >**Example:** 若使用的是 WebKit 的浏览器，则弹出提示框 "this is WebKit!"。
 
-```
+```js
 if ($.browser.webkit) {
-    alert( "this is webkit!" );
+    alert("this is webkit!");
 }
 ```
 
 >**Example:** 为不同的浏览器设置不同的 CSS 属性。
 
-```
+```js
 if ($.browser.msie) {
-    $("#div ul li").css( "display","inline" );
+    $("#div ul li").css("display","inline");
 } else {
-    $("#div ul li").css( "display","inline-table" );
+    $("#div ul li").css("display","inline-table");
 }
 ```
 
@@ -51,8 +51,8 @@ if ($.browser.msie) {
 
 >**Example:** 弹出当前的 IE 版本:
 
-```
-if ($.browser.msie ) {
+```js
+if ($.browser.msie) {
     alert($.browser.version);
 }
 ```
